@@ -15,7 +15,7 @@ const port = 3000
 const publicPath = path.resolve(__dirname, '../public')
 app.use(express.static(publicPath))
 
-mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost:27017/iotdata', {
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/iotdata', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log('Connected to MongoDB'))
